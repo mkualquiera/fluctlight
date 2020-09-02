@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4b6911ccd5951d90d7b1b2101a83a2f9789188510a52bf484f8c0accfe6f27fa
+-- hash: fae872b806fe97267d358004b5a707d61df255e840ef301637fb38a0ab8c061d
 
 name:           fluctlight
 version:        0.1.0.0
@@ -27,13 +27,18 @@ source-repository head
 
 library
   exposed-modules:
+      Brzozowski
+      DFA
       Lib
+      RegExp
   other-modules:
       Paths_fluctlight
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
   default-language: Haskell2010
 
 executable fluctlight-exe
